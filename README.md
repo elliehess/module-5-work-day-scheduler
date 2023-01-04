@@ -6,10 +6,11 @@ This is a daily planner that can be used to add events so that you may clearly s
 
 ## Visuals
 
-![_Users_ellie_Desktop_bootcamp_challenges_module-3-challenge-password-generator_index html](https://user-images.githubusercontent.com/118075347/206929410-12fcd1c2-7978-4d18-9aa5-1295e1ef015e.png)
+![elliehess github io_module-5-work-day-scheduler_](https://user-images.githubusercontent.com/118075347/210490407-c6610b63-875b-4de7-8a0a-eb842b65f665.png)
 
 
-[Click here for Webpage](https://elliehess.github.io/module-3-challenge-password-generator/)
+
+[Click here for Webpage](https://elliehess.github.io/module-5-work-day-scheduler/)
 
 ## Installation
 
