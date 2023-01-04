@@ -16,7 +16,7 @@ $(document).ready(function () {
     $(".saveBtn").on("click", function () {
       //use jquery to get values 
       var textinputEl = $(this).siblings(".description").val();
-      var timeinputEl = $(this).parent().attr("id");
+      var timeinputEl = $(this).parent().attr("id").split("-")[1];
 
       //save these values to local storage 
       localStorage.setItem(timeinputEl, textinputEl);
@@ -28,7 +28,7 @@ $(document).ready(function () {
 
               // create a loop for the time blocks 
               $(".time-block").each(function () {
-                  var blockTime = parseInt($(this).attr("id").split("hour")[1]);
+                  var blockTime = parseInt($(this).attr("id").split("-")[1]);
       
                   // create an if statement to check the time and add appropriate background classes
                   if (blockTime < timeNow) {
@@ -49,13 +49,22 @@ $(document).ready(function () {
                   }
               })
           }
-    }
 
     //Get the items from local storage if any stored
-    $("#hour-9 .description").val(localStorage.getItem)("hour-9"));
+    $("#hour-9 .description").val(localStorage.getItem("9"));
+    $("#hour-10 .description").val(localStorage.getItem("10"));
+    $("#hour-11 .description").val(localStorage.getItem("11"));
+    $("#hour-12 .description").val(localStorage.getItem("12"));
+    $("#hour-13 .description").val(localStorage.getItem("13"));
+    $("#hour-14 .description").val(localStorage.getItem("14"));
+    $("#hour-15 .description").val(localStorage.getItem("15"));
+    $("#hour-16 .description").val(localStorage.getItem("16"));
+    $("#hour-17 .description").val(localStorage.getItem("17"));
+    
 
     timeTracker();
-
+  
+  });
 
   displayTime(); //run function for today's date
   setInterval(displayTime, 1000); //automatically update 
