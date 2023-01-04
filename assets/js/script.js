@@ -4,8 +4,17 @@
 
 var currentDayEl = $('#currentDay');
 
-$(function () {
-    // TODO: Add a listener for click events on the save button. This code should
+$(document).ready(function () {
+    // Add a listener for click events on the save button. 
+    $(".saveBtn").on("click"), function () {
+      //use jquery to get values 
+      var textinputEl = $(this).siblings(".description").val();
+      var timeinputEl = $(this).parent().attr("id");
+
+      //save these values to local storage 
+      localStorage.setItem(timeinputEl, textinputEl);
+    }
+
     // use the id in the containing time-block as a key to save the user input in
     // local storage. HINT: What does `this` reference in the click listener
     // function? How can DOM traversal be used to get the "hour-x" id of the
@@ -22,15 +31,16 @@ $(function () {
     // the values of the corresponding textarea elements. HINT: How can the id
     // attribute of each time-block be used to do this?
     //
-    // TODO: Add code to display the current date in the header of the page.
+    // 
   
 
   });
 
+  //display today's date and time 
   function displayTime() {
     var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
     currentDayEl.text(rightNow);
   }
 
-  displayTime();
-  setInterval(displayTime, 1000);
+  displayTime(); //run function for today's date
+  setInterval(displayTime, 1000); //automatically update 
